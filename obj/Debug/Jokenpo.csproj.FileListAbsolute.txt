@@ -1,0 +1,10 @@
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.csproj.AssemblyReference.cache
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.Form1.resources
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.Properties.Resources.resources
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.csproj.GenerateResource.cache
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.csproj.CoreCompileInputs.cache
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\bin\Debug\Jokenpo.exe.config
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\bin\Debug\Jokenpo.exe
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\bin\Debug\Jokenpo.pdb
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.exe
+C:\Users\Fortec\source\repos\aulaLeandro\Jokenpo\Jokenpo\obj\Debug\Jokenpo.pdb
