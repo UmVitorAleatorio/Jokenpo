@@ -42,6 +42,7 @@
             this.btnNovoJogo = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.verifyTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jTesoura)).BeginInit();
@@ -194,6 +195,10 @@
             // 
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+            // verifyTimer
+            // 
+            this.verifyTimer.Tick += new System.EventHandler(this.verifyTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +243,7 @@
         private System.Windows.Forms.PictureBox cPapel;
         private System.Windows.Forms.PictureBox cPedra;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Timer verifyTimer;
     }
 }
 

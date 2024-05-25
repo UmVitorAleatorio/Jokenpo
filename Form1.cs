@@ -8,6 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
 using System.Media;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Jokenpo
 {
@@ -92,6 +93,20 @@ namespace Jokenpo
             Close();
         }
 
+        int tVerify = 15;
+        public void verifyTimer_Tick(object sender, EventArgs e)
+        {
+            if (tVerify <= 0) {
+                verifyTimer.Enabled = false;
+                gameTimer.Enabled = true;
+                tVerify = 15;
+            }
+            else
+            {
+                tVerify--;
+            }
+        }
+
         public void verificar()
         {
             Random r = new Random();
@@ -99,12 +114,18 @@ namespace Jokenpo
             switch (x) { 
                 case 1:
                 cPapel.Visible = true;
+                    verifyTimer.Enabled = true;
+                    gameTimer.Enabled = false;
                 break;
                 case 2:
                     cPedra.Visible = true;
+                    verifyTimer.Enabled = true;
+                    gameTimer.Enabled = false;
                 break;
                 case 3:
                     cTesoura.Visible = true;
+                    verifyTimer.Enabled = true;
+                    gameTimer.Enabled = false;
                 break;
             }
                 
@@ -115,7 +136,7 @@ namespace Jokenpo
             {
                 totj++;
                 groupBox1.Text = "Jogador: " + totj.ToString();
-                MessageBox.Show("Parabéns, você ganhou");
+                MessageBox.Show("+1 Ponto jogador");
             }
             else if ((cPapel.Visible == true && jPedra.Visible == true) ||
                 (cPedra.Visible == true && jTesoura.Visible == true) ||
@@ -123,10 +144,11 @@ namespace Jokenpo
             {
                 totc++;
                 groupBox2.Text = "Computador: " + totc.ToString();
-                MessageBox.Show("Que pena, computador ganhou");
+                MessageBox.Show("+1 Ponto computador");
             }
-            else
-                MessageBox.Show("Houve Empate kkkkk");
+            else { 
+                MessageBox.Show("Empate");   
+            }
             limpar();
         }
 
