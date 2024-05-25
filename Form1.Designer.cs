@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblTempo = new System.Windows.Forms.Label();
-            this.btnNovoJogo = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.jPedra = new System.Windows.Forms.PictureBox();
-            this.jPapel = new System.Windows.Forms.PictureBox();
             this.jTesoura = new System.Windows.Forms.PictureBox();
+            this.jPapel = new System.Windows.Forms.PictureBox();
+            this.jPedra = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cTesoura = new System.Windows.Forms.PictureBox();
             this.cPapel = new System.Windows.Forms.PictureBox();
             this.cPedra = new System.Windows.Forms.PictureBox();
+            this.lblTempo = new System.Windows.Forms.Label();
+            this.btnNovoJogo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jPedra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jPapel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jTesoura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jPapel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jPedra)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTesoura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPapel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPedra)).BeginInit();
@@ -76,6 +76,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Jogador";
             // 
+            // jTesoura
+            // 
+            this.jTesoura.Enabled = false;
+            this.jTesoura.Image = global::Jokenpo.Properties.Resources.tesoura;
+            this.jTesoura.Location = new System.Drawing.Point(287, 28);
+            this.jTesoura.Name = "jTesoura";
+            this.jTesoura.Size = new System.Drawing.Size(90, 77);
+            this.jTesoura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.jTesoura.TabIndex = 2;
+            this.jTesoura.TabStop = false;
+            this.jTesoura.Click += new System.EventHandler(this.jTesoura_Click);
+            // 
+            // jPapel
+            // 
+            this.jPapel.Enabled = false;
+            this.jPapel.Image = global::Jokenpo.Properties.Resources.papel;
+            this.jPapel.Location = new System.Drawing.Point(156, 27);
+            this.jPapel.Name = "jPapel";
+            this.jPapel.Size = new System.Drawing.Size(90, 77);
+            this.jPapel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.jPapel.TabIndex = 1;
+            this.jPapel.TabStop = false;
+            this.jPapel.Click += new System.EventHandler(this.jPapel_Click);
+            // 
+            // jPedra
+            // 
+            this.jPedra.Enabled = false;
+            this.jPedra.Image = global::Jokenpo.Properties.Resources.pedra;
+            this.jPedra.Location = new System.Drawing.Point(25, 28);
+            this.jPedra.Name = "jPedra";
+            this.jPedra.Size = new System.Drawing.Size(90, 77);
+            this.jPedra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.jPedra.TabIndex = 0;
+            this.jPedra.TabStop = false;
+            this.jPedra.Click += new System.EventHandler(this.jPedra_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cTesoura);
@@ -88,71 +124,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Computador";
-            // 
-            // lblTempo
-            // 
-            this.lblTempo.AutoSize = true;
-            this.lblTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempo.Location = new System.Drawing.Point(127, 411);
-            this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(73, 20);
-            this.lblTempo.TabIndex = 3;
-            this.lblTempo.Text = "Tempo: ";
-            // 
-            // btnNovoJogo
-            // 
-            this.btnNovoJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoJogo.Location = new System.Drawing.Point(12, 403);
-            this.btnNovoJogo.Name = "btnNovoJogo";
-            this.btnNovoJogo.Size = new System.Drawing.Size(106, 36);
-            this.btnNovoJogo.TabIndex = 4;
-            this.btnNovoJogo.Text = "Novo Jogo";
-            this.btnNovoJogo.UseVisualStyleBackColor = true;
-            this.btnNovoJogo.Click += new System.EventHandler(this.btnNovoJogo_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(271, 403);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(108, 36);
-            this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // jPedra
-            // 
-            this.jPedra.Image = global::Jokenpo.Properties.Resources.pedra;
-            this.jPedra.Location = new System.Drawing.Point(25, 28);
-            this.jPedra.Name = "jPedra";
-            this.jPedra.Size = new System.Drawing.Size(90, 77);
-            this.jPedra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.jPedra.TabIndex = 0;
-            this.jPedra.TabStop = false;
-            this.jPedra.Click += new System.EventHandler(this.jPedra_Click);
-            // 
-            // jPapel
-            // 
-            this.jPapel.Image = global::Jokenpo.Properties.Resources.papel;
-            this.jPapel.Location = new System.Drawing.Point(156, 27);
-            this.jPapel.Name = "jPapel";
-            this.jPapel.Size = new System.Drawing.Size(90, 77);
-            this.jPapel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.jPapel.TabIndex = 1;
-            this.jPapel.TabStop = false;
-            this.jPapel.Click += new System.EventHandler(this.jPapel_Click);
-            // 
-            // jTesoura
-            // 
-            this.jTesoura.Image = global::Jokenpo.Properties.Resources.tesoura;
-            this.jTesoura.Location = new System.Drawing.Point(287, 28);
-            this.jTesoura.Name = "jTesoura";
-            this.jTesoura.Size = new System.Drawing.Size(90, 77);
-            this.jTesoura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.jTesoura.TabIndex = 2;
-            this.jTesoura.TabStop = false;
-            this.jTesoura.Click += new System.EventHandler(this.jTesoura_Click);
             // 
             // cTesoura
             // 
@@ -187,9 +158,40 @@
             this.cPedra.TabStop = false;
             this.cPedra.Visible = false;
             // 
+            // lblTempo
+            // 
+            this.lblTempo.AutoSize = true;
+            this.lblTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempo.Location = new System.Drawing.Point(127, 411);
+            this.lblTempo.Name = "lblTempo";
+            this.lblTempo.Size = new System.Drawing.Size(73, 20);
+            this.lblTempo.TabIndex = 3;
+            this.lblTempo.Text = "Tempo: ";
+            // 
+            // btnNovoJogo
+            // 
+            this.btnNovoJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoJogo.Location = new System.Drawing.Point(12, 403);
+            this.btnNovoJogo.Name = "btnNovoJogo";
+            this.btnNovoJogo.Size = new System.Drawing.Size(106, 36);
+            this.btnNovoJogo.TabIndex = 4;
+            this.btnNovoJogo.Text = "Novo Jogo";
+            this.btnNovoJogo.UseVisualStyleBackColor = true;
+            this.btnNovoJogo.Click += new System.EventHandler(this.btnNovoJogo_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(271, 403);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(108, 36);
+            this.btnSair.TabIndex = 5;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // gameTimer
             // 
-            this.gameTimer.Enabled = true;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Form1
@@ -209,10 +211,10 @@
             this.Text = "Jokenpo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.jPedra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jPapel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jTesoura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jPapel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jPedra)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cTesoura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPapel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPedra)).EndInit();

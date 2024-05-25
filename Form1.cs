@@ -7,17 +7,17 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Jokenpo
 {
     public partial class Form1 : Form
     {
-        System.Media.SoundPlayer MeuPlayer = new
-                System.Media.SoundPlayer("som.wav");
+        SoundPlayer MeuPlayer = new SoundPlayer("som.wav");
         public Form1()
         {
             InitializeComponent();
-           // MeuPlayer.Play();
+            MeuPlayer.Play();
         }
 
         private void jPapel_Click(object sender, EventArgs e)
@@ -54,6 +54,17 @@ namespace Jokenpo
                 jPapel.Enabled = false;
                 jPedra.Enabled = false;
                 jTesoura.Enabled = false;
+                if (totj > totc)
+                {
+                    MessageBox.Show("Parabéns, Você venceu!!!");
+                }else if(totj < totc)
+                {
+                    MessageBox.Show("Parabéns, Você Perdeu!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Ih rapaix empatou");
+                }
             }
             else
             {
@@ -85,12 +96,18 @@ namespace Jokenpo
         {
             Random r = new Random();
             int x = r.Next(3) + 1;
-            if (x == 1)
+            switch (x) { 
+                case 1:
                 cPapel.Visible = true;
-            else if (x == 2)
-                cPedra.Visible = true;
-            else
-                cTesoura.Visible = true;
+                break;
+                case 2:
+                    cPedra.Visible = true;
+                break;
+                case 3:
+                    cTesoura.Visible = true;
+                break;
+            }
+                
             //verificando quem ganhou
             if ((jPapel.Visible == true && cPedra.Visible == true) ||
                 (jPedra.Visible == true && cTesoura.Visible == true) ||
